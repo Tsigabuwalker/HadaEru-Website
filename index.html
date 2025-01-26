@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HadaEru Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-green-500 text-white">
+
+    <header class="p-6">
+        <h1 class="text-4xl font-bold text-center">Welcome to HadaEru</h1>
+        <nav class="flex justify-center space-x-4 mt-4">
+            <a href="#home" class="hover:text-yellow-300" onclick="showSection('home')">Home</a>
+            <a href="#about" class="hover:text-yellow-300" onclick="showSection('about')">About</a>
+            <a href="#background" class="hover:text-yellow-300" onclick="showSection('background')">Background</a>
+            <a href="#services" class="hover:text-yellow-300" onclick="showSection('services')">Services</a>
+        </nav>
+    </header>
+
+    <section id="home" class="h-screen flex items-center justify-center">
+        <h2 class="text-6xl font-bold animate-bounce">Explore HadaEru</h2>
+        <h2>Welcome To Our HomeLand </h2>
+    </section>
+
+    <section id="about" class="p-10 fade-in hidden">
+        <h2 class="text-3xl font-bold mb-4">About HadaEru</h2>
+        <div class="flex items-center mb-4">
+            <img src="/image/profile.jpg" alt="Profile" class="w-32 h-32 rounded-full border-4 border-yellow-300 mr-4">
+            
+            <p class="mb-4">HadaEru is a beautiful place known for its rich culture and stunning landscapes. It offers a unique glimpse into the traditions and lifestyle of the people in the region.</p>
+        </div>
+    </section>
+
+    <section id="background" class="p-10 fade-in hidden">
+        <h2 class="text-3xl font-bold mb-4">Background of HadaEru</h2>
+        <p class="mb-4">The history of HadaEru is deeply rooted in the heritage of Tigayira. It has been a center for trade and culture for centuries.</p>
+    </section>
+
+    <section id="services" class="p-10 fade-in hidden">
+        <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+        <ul class="list-disc pl-5">
+            <li>Guided Tours</li>
+            <li>Cultural Workshops</li>
+            <li>Photography Services</li>
+        </ul>
+    </section>
+
+    <footer class="p-6 text-center">
+        <p>&copy; 2025 HadaEru Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
