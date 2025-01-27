@@ -19,11 +19,25 @@
         </nav>
     </header>
 
-    <section id="home" class="h-screen flex items-center justify-center">
-        <h2 class="text-6xl font-bold animate-bounce">Explore HadaEru</h2>
-        <h2>Welcome To Our HomeLand </h2>
+    <section id="home" class="h-screen flex flex-col items-center justify-center">
+        <h2 class="text-6xl font-bold transform transition-transform duration-500 ease-in-out translate-y-4 opacity-0 animate-bounce">Explore HadaEru</h2>
+        <h3 class="text-2xl font-medium text-gray-600 mt-4 transform transition-transform duration-500 ease-in-out translate-y-4 opacity-0">Welcome To Our HomeLand</h3>
     </section>
-
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const h2 = document.querySelector('h2');
+            const h3 = document.querySelector('h3');
+            
+            setTimeout(() => {
+                h2.classList.remove('translate-y-4', 'opacity-0');
+            }, 500); // Delay for h2 animation
+    
+            setTimeout(() => {
+                h3.classList.remove('translate-y-4', 'opacity-0');
+            }, 1000); // Delay for h3 animation
+        });
+    </script>
     <section id="about" class="p-10 fade-in hidden">
         <h2 class="text-3xl font-bold mb-4">About HadaEru</h2>
         <div class="flex items-center mb-4">
