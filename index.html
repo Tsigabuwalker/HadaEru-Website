@@ -29,7 +29,7 @@
 
         <section id="about" class="p-10 fade-in hidden">
             <h2 class="text-4xl font-bold mb-4">About Raya</h2>
-            <div class="flex items-center mb-4">
+            <div class="flex flex-col md:flex-row items-center mb-4">
                 <img src="/image/profile.jpg" alt="Profile" class="w-32 h-32 rounded-full border-4 border-yellow-300 mr-4">
                 <p class="text-lg">HadaEru is a beautiful place known for its rich culture and stunning landscapes. It offers a unique glimpse into the traditions and lifestyle of the people in the region.</p>
             </div>
@@ -51,33 +51,58 @@
 
         <section id="education" class="p-10 fade-in hidden">
             <h2 class="text-4xl font-bold mb-4">Our Visionaries:</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div class="text-center">
                     <img src="/image/talent1.jpg" alt="Tsigabu Seyoum" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
                     <p>Tsigabu Seyoum - Software Engineer</p>
+                    <div class="more-info hidden">
+                        <p>Expert in software development with 5 years of experience.</p>
+                    </div>
+                    <button class="read-more" onclick="toggleInfo(this)">Read More</button>
                 </div>
                 <div class="text-center">
                     <img src="/image/talent2.jpg" alt="Abera Hiluf" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
                     <p>Abera Hiluf - Software Engineer</p>
+                    <div class="more-info hidden">
+                        <p>Specializes in web development and machine learning.</p>
+                    </div>
+                    <button class="read-more" onclick="toggleInfo(this)">Read More</button>
                 </div>
                 <div class="text-center">
                     <img src="/image/talent3.jpg" alt="Chaffe" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
                     <p>Chaffe - Economist</p>
+                    <div class="more-info hidden">
+                        <p>Focuses on economic analysis and policy development.</p>
+                    </div>
+                    <button class="read-more" onclick="toggleInfo(this)">Read More</button>
                 </div>
                 <div class="text-center">
                     <img src="/image/talent4.jpg" alt="Nigus Kassa" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
                     <p>Nigus Kassa - Medical Doctor</p>
+                    <div class="more-info hidden">
+                        <p>Practicing medicine for over 10 years with expertise in surgery.</p>
+                    </div>
+                    <button class="read-more" onclick="toggleInfo(this)">Read More</button>
                 </div>
                 <div class="text-center">
-                    <img src="/image/talent5.jpg" alt="John" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
+                    <img src="/image/talent5.jpg" alt="Bashay" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
                     <p>Bashay - Software Engineer</p>
+                    <div class="more-info hidden">
+                        <p>Experienced in mobile app development and UX design.</p>
+                    </div>
+                    <button class="read-more" onclick="toggleInfo(this)">Read More</button>
                 </div>
                 <div class="text-center">
                     <img src="/image/talent6.jpg" alt="John" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
                     <p>John - Statistician</p>
+                    <div class="more-info hidden">
+                        <p>Data analyst with a focus on statistical modeling and research.</p>
+                    </div>
+                    <button class="read-more" onclick="toggleInfo(this)">Read More</button>
                 </div>
             </div>
         </section>
+
         <section id="culture" class="p-10 fade-in hidden">
             <h2 class="text-4xl font-bold mb-4">Our Cultures:</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -114,30 +139,6 @@
         <p>&copy; 2025 HadaEru Portfolio. All rights reserved.</p>
     </footer>
 
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('main section');
-            sections.forEach(section => {
-                section.classList.add('hidden');
-                section.classList.remove('fade-in');
-            });
-            const activeSection = document.getElementById(sectionId);
-            activeSection.classList.remove('hidden');
-            activeSection.classList.add('fade-in');
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const h2 = document.querySelector('#home h2');
-            const h3 = document.querySelector('#home h3');
-            
-            setTimeout(() => {
-                h2.classList.remove('opacity-0');
-            }, 500); // Delay for h2 animation
-
-            setTimeout(() => {
-                h3.classList.remove('opacity-0');
-            }, 1000); // Delay for h3 animation
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -13,3 +13,16 @@ function showSection(sectionId) {
 document.addEventListener('DOMContentLoaded', () => {
     showSection('home');
 });
+
+function toggleInfo(button) {
+    const moreInfo = button.previousElementSibling; // Get the .more-info div
+    const isHidden = moreInfo.classList.contains('hidden');
+
+    if (isHidden) {
+        moreInfo.classList.remove('hidden'); // Show more info
+        button.textContent = 'Read Less'; // Change button text
+    } else {
+        moreInfo.classList.add('hidden'); // Hide more info
+        button.textContent = 'Read More'; // Change button text back
+    }
+}
