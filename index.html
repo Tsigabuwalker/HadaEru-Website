@@ -3,68 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raya </title>
+    <title>Raya</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gradient-to-r from-blue-500 to-green-500 text-white">
 
     <header class="p-6">
-        <h1 class="text-4xl font-bold text-center">Welcome to Raya Website</h1>
-        <nav class="flex justify-center space-x-4 mt-4">
-            <a href="#home" class="hover:text-yellow-300" onclick="showSection('home')">Home</a>
-            <a href="#about" class="hover:text-yellow-300" onclick="showSection('about')">About</a>
-            <a href="#background" class="hover:text-yellow-300" onclick="showSection('background')">Background</a>
-            <a href="#resource" class="hover:text-yellow-300" onclick="showSection('services')">Resources</a>
+        <h1 class="text-5xl font-bold text-center mb-4">Welcome to Raya Website</h1>
+        <nav class="flex justify-center space-x-6 mt-4">
+            <a href="#home" class="hover:text-yellow-300 transition duration-300" onclick="showSection('home')">Home</a>
+            <a href="#about" class="hover:text-yellow-300 transition duration-300" onclick="showSection('about')">About</a>
+            <a href="#background" class="hover:text-yellow-300 transition duration-300" onclick="showSection('background')">Background</a>
+            <a href="#resources" class="hover:text-yellow-300 transition duration-300" onclick="showSection('resources')">Resources</a>
+            <a href="#education" class="hover:text-yellow-300 transition duration-300" onclick="showSection('education')">Education</a>
+            <a href="#culture" class="hover:text-yellow-300 transition duration-300" onclick="showSection('culture')">Culture</a>
+            <a href="#contact" class="hover:text-yellow-300 transition duration-300" onclick="showSection('contact')">Contact</a>
         </nav>
     </header>
 
-    <section id="home" class="h-screen flex flex-col items-center justify-center">
-        <h2 class="text-6xl font-bold transform transition-transform duration-500 ease-in-out translate-y-4 opacity-0 animate-bounce">Do you want to Visit Raya</h2>
-        <h3 class="text-2xl font-medium text-gray-600 mt-4 transform transition-transform duration-500 ease-in-out translate-y-4 opacity-0">Welcome To Our HomeLand</h3>
-    </section>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const h2 = document.querySelector('h2');
-            const h3 = document.querySelector('h3');
-            
-            setTimeout(() => {
-                h2.classList.remove('translate-y-4', 'opacity-0');
-            }, 500); // Delay for h2 animation
-    
-            setTimeout(() => {
-                h3.classList.remove('translate-y-4', 'opacity-0');
-            }, 1000); // Delay for h3 animation
-        });
-    </script>
-    <section id="about" class="p-10 fade-in hidden">
-        <h2 class="text-3xl font-bold mb-4">About Raya</h2>
-        <div class="flex items-center mb-4">
-            <img src="/image/profile.jpg" alt="Profile" class="w-32 h-32 rounded-full border-4 border-yellow-300 mr-4">
-            
-            <p class="mb-4">HadaEru is a beautiful place known for its rich culture and stunning landscapes. It offers a unique glimpse into the traditions and lifestyle of the people in the region.</p>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="h-screen flex flex-col items-center justify-center">
+            <h2 class="text-6xl font-bold animate-bounce opacity-0 transition-all duration-1000 delay-500">Do you want to Visit Raya?</h2>
+            <h3 class="text-2xl font-medium text-gray-300 mt-4 opacity-0 transition-all duration-1000 delay-1000">Welcome To Our HomeLand</h3>
+        </section>
 
-    <section id="background" class="p-10 fade-in hidden">
-        <h2 class="text-3xl font-bold mb-4">Background of HadaEru</h2>
-        <p class="mb-4">The history of HadaEru is deeply rooted in the heritage of Tigayira. It has been a center for trade and culture for centuries.</p>
-    </section>
+        <section id="about" class="p-10 fade-in hidden">
+            <h2 class="text-4xl font-bold mb-4">About Raya</h2>
+            <div class="flex items-center mb-4">
+                <img src="/image/profile.jpg" alt="Profile" class="w-32 h-32 rounded-full border-4 border-yellow-300 mr-4">
+                <p class="text-lg">HadaEru is a beautiful place known for its rich culture and stunning landscapes. It offers a unique glimpse into the traditions and lifestyle of the people in the region.</p>
+            </div>
+        </section>
 
-    <section id="services" class="p-10 fade-in hidden">
-        <h2 class="text-3xl font-bold mb-4">Our Top Resources are Listed:</h2>
-        <ul class="list-disc pl-5">
-            <li>Teff</li>
-            <li>Mashilla</li>
-            <li>kulqualla(beles)</li>
-        </ul>
-    </section>
+        <section id="background" class="p-10 fade-in hidden">
+            <h2 class="text-4xl font-bold mb-4">Some Background of Raya</h2>
+            <p class="text-lg">The history of HadaEru is deeply rooted in the heritage of Tigayira. It has been a center for trade and culture for centuries.</p>
+        </section>
+
+        <section id="resources" class="p-10 fade-in hidden">
+            <h2 class="text-4xl font-bold mb-4">Our Top Resources:</h2>
+            <ul class="list-disc pl-5 text-lg">
+                <li>Teff</li>
+                <li>Mashilla</li>
+                <li>Kulqualla (Beles)</li>
+            </ul>
+        </section>
+
+        <section id="education" class="p-10 fade-in hidden">
+            <h2 class="text-4xl font-bold mb-4">Our Top Talents:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <img src="/image/talent1.jpg" alt="Tsigabu Seyoum" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
+                    <p>Tsigabu Seyoum - Software Engineer</p>
+                </div>
+                <div class="text-center">
+                    <img src="/image/talent2.jpg" alt="Abera Hiluf" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
+                    <p>Abera Hiluf - Software Engineer</p>
+                </div>
+                <div class="text-center">
+                    <img src="/image/talent3.jpg" alt="Chaffe" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
+                    <p>Chaffe - Economist</p>
+                </div>
+                <div class="text-center">
+                    <img src="/image/talent4.jpg" alt="Nigus Kassa" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
+                    <p>Nigus Kassa - Medical Doctor</p>
+                </div>
+                <div class="text-center">
+                    <img src="/image/talent5.jpg" alt="John" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
+                    <p>Bashay - Software Engineer</p>
+                </div>
+                <div class="text-center">
+                    <img src="/image/talent6.jpg" alt="John" class="w-32 h-32 object-cover rounded-full mb-2 mx-auto">
+                    <p>John - Statistician</p>
+                </div>
+            </div>
+        </section>
+        <section id="culture" class="p-10 fade-in hidden">
+            <h2 class="text-4xl font-bold mb-4">Our Cultures:</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <img src="/images/culture1.jpg" alt="Gumaye" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <p>Gumaye</p>
+                </div>
+                <div class="text-center">
+                    <img src="/images/culture2.jpg" alt="Eruna" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <p>Eruna</p>
+                </div>
+                <div class="text-center">
+                    <img src="/images/culture3.jpg" alt="Gidil" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <p>Gidil</p>
+                </div>
+                <div class="text-center">
+                    <img src="/images/culture4.jpg" alt="Hukufey" class="w-full h-48 object-cover rounded-lg mb-2">
+                    <p>Hukufey</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="p-10 fade-in hidden">
+            <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+            <ul class="list-disc pl-5 text-lg">
+                <li>Email: tsigabu.seyoum-ug@aau.edu.et</li>
+                <li>Phone: +251985021894</li>
+                <li>Twitter: @man_A3</li>
+            </ul>
+        </section>
+    </main>
 
     <footer class="p-6 text-center">
         <p>&copy; 2025 HadaEru Portfolio. All rights reserved.</p>
     </footer>
 
-    <script src="index.js"></script>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+                section.classList.remove('fade-in');
+            });
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.remove('hidden');
+            activeSection.classList.add('fade-in');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const h2 = document.querySelector('#home h2');
+            const h3 = document.querySelector('#home h3');
+            
+            setTimeout(() => {
+                h2.classList.remove('opacity-0');
+            }, 500); // Delay for h2 animation
+
+            setTimeout(() => {
+                h3.classList.remove('opacity-0');
+            }, 1000); // Delay for h3 animation
+        });
+    </script>
 </body>
 </html>
